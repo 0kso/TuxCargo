@@ -4,6 +4,7 @@ TXC
 Tux Containers - Make LXC easy for test-and-deploy
 
 And Pegase is part of the adventure !
+Thanks to 0kso, I can join :DDDD
 
 == Host Steps ==
 
