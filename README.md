@@ -24,3 +24,5 @@ Thanks to 0kso, I can join :DDDD
 1. Rsync vm (or zip)
 2. Configure server
 3. Launch on server
+
+* Pour info, je n'ai encore réussi qu'à créer correctement des conteneurs Debian (0kso)
