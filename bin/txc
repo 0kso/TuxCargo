@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+
+import os
+
+# Development hack : adding path to PeachPy manually
+import sys
+sys.path.append(os.path.abspath(''))
+sys.path.append(os.path.abspath('../PeachPy'))
+
+import peachpy
+from txc.configure import Configure
+
+class Root(object):
+	
+	configure = Configure()
+
+	@peachpy.expose
+	def index(self):
+		os.system('cowsay "TXC is still in dev..."')
+		return ''
+
+	@peachpy.expose
+	def create(self, name):
+		return 'Creating {0}'.format(name)
+
+root = Root()
+
+peachpy.quickstart(root)
