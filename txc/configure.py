@@ -22,7 +22,7 @@ iface br0 inet static
 	post-up echo 1 > /proc/sys/net/ipv4/ip_forward
 '''
 
-class TXCConfiguration(object):
+class NetworkConfig(object):
 
 	template = IFACE_TEMPLATE
 
@@ -32,18 +32,27 @@ class TXCConfiguration(object):
 			'netmask': '255.255.255.0',
 		}
 
+	def manual_update(self):
+		for key in self.config:
+			new = raw_input('{0} [{1}]: '.format(key, self.config[key]))
+			if new: self.config[key] = new
+
 	def __str__(self):
 		return self.template.format(self.config)
 
 class Configure(object):
 
 	def __init__(self):
-		self.ask = Ask()
+		self.configs = [NetworkConfig(),
+                                ]
 
 	@peachpy.expose
 	def index(self):
 		print 'Welcome to the TXC configuration utility.'
 		print STEPS
+		for config in self.configs:
+			config.manual_update()
 		return ''
 
-	def network_options(self):
+	#def network_options(self):
+		
