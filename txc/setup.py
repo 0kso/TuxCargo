@@ -1,5 +1,6 @@
 
 import peachpy
+from peachpy.tool import Tool
 
 STEPS = '''
 Steps to be done:
@@ -22,7 +23,10 @@ iface br0 inet static
 	post-up echo 1 > /proc/sys/net/ipv4/ip_forward
 '''
 
-class NetworkConfig(object):
+class Config(object):
+	pass
+
+class NetworkConfig(Config):
 
 	template = IFACE_TEMPLATE
 
@@ -40,7 +44,7 @@ class NetworkConfig(object):
 	def __str__(self):
 		return self.template.format(self.config)
 
-class Configure(object):
+class SetupTool(Tool):
 
 	def __init__(self):
 		self.configs = [NetworkConfig(),
@@ -48,7 +52,7 @@ class Configure(object):
 
 	@peachpy.expose
 	def index(self):
-		print 'Welcome to the TXC configuration utility.'
+		print 'Welcome to the TXC setup utility.'
 		print STEPS
 		for config in self.configs:
 			config.manual_update()
