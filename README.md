@@ -31,3 +31,7 @@ Thanks to 0kso, I can join :DDDD
 
 This work is licensed under Free Software Foundation's 
 <a rel="license" href="http://www.gnu.org/licenses/agpl-3.0.html">GNU AGPL v3.0</a>.
+
+<a href="http://www.gnu.org/licenses/agpl-3.0.html">
+    <img alt="AGPL Logo" src="http://www.gnu.org/graphics/agplv3-88x31.png" />
+</a>
