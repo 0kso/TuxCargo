@@ -1,16 +1,18 @@
-TXC
-===
+Tux Cargo
+=========
 
 Tux Containers - Make LXC easy for test-and-deploy
 
 And Pegase is part of the adventure !
 Thanks to 0kso, I can join :DDDD
 
-== Host Steps ==
+Host Steps
+----------
 
 1. Configure network interfaces (NAT, ip forwading, ...)
 
-== Guest Steps ==
+Guest Steps
+----------
 
 0. Load and create config for new machine
 1. Generate builder from template (IP, iface, packages, ...)
@@ -18,7 +20,8 @@ Thanks to 0kso, I can join :DDDD
 3. Create user, add ssh authorized keys
 4. Host: configure iptables, nginx
 
-== Deployment steps ==
+Deployment steps
+----------------
 
 0. Make sure vm is stopped
 1. Rsync vm (or zip)
