@@ -3,8 +3,22 @@ Tux Cargo
 
 Tux Containers - Make LXC easy for test-and-deploy
 
-And Pegase is part of the adventure !
-Thanks to 0kso, I can join :DDDD
+Introduction
+------------
+
+Linux Containers (LXC) are an awesome way to isolate processes
+and create efficient and flexible virtual machines with Linux. 
+Tux Cargo aims at building an easy way to configure and deploy
+LXC virtual machines.
+
+Main objectives are :
+ * Creating new virtual machines with a NAT network configuration, the
+   next IP available on your virtual network, your favourite packages, 
+   your public ssh key and VIM settings, a preconfigured user, NGinx
+   virtual hosts, iptables rules, ...
+ * Deploying a virtual machine to a host and automatically reconfigure
+   it for the new environment (network setup, NGinx virtual hosts, 
+   iptables rules, ...)
 
 Host Steps
 ----------
