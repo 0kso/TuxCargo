@@ -20,6 +20,17 @@ Main objectives are :
    it for the new environment (network setup, NGinx virtual hosts, 
    iptables rules, ...)
 
+<pre><code>
+# txc create djangoblog
+# ssh djangoblog.vm
+(customizing machine...)
+# txc deploy djangoblog host.superserver.net -h blog.mysite.net
+
+# txc clone wordpressblog
+(configuring machine...)
+# txc deploy wordpressblog host.superserver.net -h otherblog.mysite.net 
+</code></pre>
+
 Host Steps
 ----------
 
