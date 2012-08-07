@@ -1,6 +1,6 @@
 
 import peachpy
-from peachpy.tool import Tool
+from cargo.tool import Tool
 
 STEPS = '''
 Steps to be done:

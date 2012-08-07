@@ -8,11 +8,11 @@ sys.path.append(os.path.abspath(''))
 sys.path.append(os.path.abspath('../PeachPy'))
 
 import peachpy
-from txc.configure import Configure
+from cargo.setup import SetupTool
 
 class Root(object):
 	
-	configure = Configure()
+	setup = SetupTool()
 
 	@peachpy.expose
 	def index(self):
@@ -24,5 +24,4 @@ class Root(object):
 		return 'Creating {0}'.format(name)
 
 root = Root()
-
 peachpy.quickstart(root)
